@@ -62,21 +62,28 @@ namespace lab3
                 anchorFigure = new AnchorFigure();
             }
 
-            Bitmap bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
-            //Graphics graphics = Graphics.FromImage(bmp);
-            Graphics graphics = pictureBox1.CreateGraphics();
-            graphics.Clear(Color.White);
             //graphics.DrawImage(Properties.Resources.Untitled, new Point(0, 0));
 
-            for (int i = 0; i < anchorFigure.AnchorToBuild.Count; i++)
+            DrawAnchor(anchorFigure);
+            
+
+            //pictureBox1.Image = bmp;
+        }
+
+        private void DrawAnchor(AnchorFigure aF)
+        {
+            Graphics graphics = pictureBox1.CreateGraphics();
+            graphics.Clear(Color.White);
+
+            for (int i = 0; i < aF.AnchorToBuild.Count; i++)
             {
-                if (!anchorFigure.AnchorToBuild[i].NewStart) graphics.DrawLine(new Pen(Color.Red, 2), anchorFigure.AnchorToBuild[i - 1].GetPoint(), anchorFigure.AnchorToBuild[i].GetPoint());
+                if (!aF.AnchorToBuild[i].NewStart) graphics.DrawLine(new Pen(Color.Red, 2), aF.AnchorToBuild[i - 1].GetPoint(), aF.AnchorToBuild[i].GetPoint());
                 //Thread.Sleep(2);
             }
             bezierCurvesInfo_dgv.Rows.Clear();
 
             int curveNumber = 0;
-            foreach (BezierCurve bc in anchorFigure.bezierCurves)
+            foreach (BezierCurve bc in aF.bezierCurves)
             {
                 curveNumber++;
                 DataGridViewRow newRow = new DataGridViewRow();
@@ -93,10 +100,6 @@ namespace lab3
                     graphics.DrawRectangle(new Pen(Color.Gray, 1), bc.EndPoint.X - 2, bc.EndPoint.Y - 2, 4, 4);
                 }
             }
-
-            //pictureBox1.Image = bmp;
-
-
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)

@@ -51,7 +51,7 @@ namespace lab3
             BezierCurve bc11 = new BezierCurve(390, 143, 400, 150, 411, 158);
             BezierCurve bc12 = new BezierCurve(411, 158, 380, 200, 314, 186);
             BezierCurve bc13 = new BezierCurve(314, 186, 275, 180, 279, 144);
-            BezierCurve bc14 = new BezierCurve(280, 134, 280, 130, 310, 59);
+            BezierCurve bc14 = new BezierCurve(282, 128, 280, 130, 310, 59);
             BezierCurve bc15 = new BezierCurve(310, 59, 320, 60, 337, 61);
             BezierCurve bc16 = new BezierCurve(337, 61, 345, 65, 353, 61);
             BezierCurve bc17 = new BezierCurve(353, 61, 360, 60, 368, 63);
@@ -69,15 +69,15 @@ namespace lab3
             BezierCurve bc29 = new BezierCurve(289, 56, 300, 50, 310, 58);
             BezierCurve bc30 = new BezierCurve(317, 44, 325, 30, 311, 31);
             BezierCurve bc31 = new BezierCurve(311, 31, 305, 27, 299, 40);
-            BezierCurve bc32 = new BezierCurve(289, 56, 272, 96, 242, 134);
+            BezierCurve bc32 = new BezierCurve(289, 56, 272, 96, 247, 130);
             BezierCurve bc33 = new BezierCurve(227, 150, 205, 163, 193, 156);
             BezierCurve bc34 = new BezierCurve(174, 148, 150, 135, 152, 111);
             BezierCurve bc35 = new BezierCurve(152, 111, 163, 110, 172, 106);
             BezierCurve bc36 = new BezierCurve(172, 106, 160, 90, 163, 77);
             BezierCurve bc37 = new BezierCurve(303, 33, 270, 45, 287, 62);
             BezierCurve bc38 = new BezierCurve(305, 31, 255, 40, 282, 70);
-            BezierCurve bc39 = new BezierCurve(301, 79, 345, 115, 271, 137);
-            BezierCurve bc40 = new BezierCurve(271, 137, 180, 120, 76, 214);
+            BezierCurve bc39 = new BezierCurve(301, 79, 345, 120, 271, 130);
+            BezierCurve bc40 = new BezierCurve(271, 130, 180, 120, 76, 214);
             BezierCurve bc41 = new BezierCurve(76, 214, 76, 223, 77, 232);
             BezierCurve bc42 = new BezierCurve(77, 232, 170, 145, 241, 148);
             BezierCurve bc43 = new BezierCurve(241, 148, 375, 140, 306, 71);
