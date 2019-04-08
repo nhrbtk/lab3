@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -62,11 +63,16 @@ namespace lab3
             }
 
             Bitmap bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
-            Graphics graphics = Graphics.FromImage(bmp);
+            //Graphics graphics = Graphics.FromImage(bmp);
+            Graphics graphics = pictureBox1.CreateGraphics();
+            graphics.Clear(Color.White);
             //graphics.DrawImage(Properties.Resources.Untitled, new Point(0, 0));
 
             for (int i = 0; i < anchorFigure.AnchorToBuild.Count; i++)
+            {
                 if (!anchorFigure.AnchorToBuild[i].NewStart) graphics.DrawLine(new Pen(Color.Red, 2), anchorFigure.AnchorToBuild[i - 1].GetPoint(), anchorFigure.AnchorToBuild[i].GetPoint());
+                //Thread.Sleep(2);
+            }
             bezierCurvesInfo_dgv.Rows.Clear();
 
             int curveNumber = 0;
@@ -76,7 +82,6 @@ namespace lab3
                 DataGridViewRow newRow = new DataGridViewRow();
                 bezierCurvesInfo_dgv.Rows.Add(curveNumber, bc.StartPoint.X, bc.StartPoint.Y, bc.MiddlePoint.X, bc.MiddlePoint.Y, bc.EndPoint.X, bc.EndPoint.Y);
                 DGVEmpty = false;
-
                 if (drawPoints_chb.Checked)
                 {
                     graphics.DrawLine(new Pen(Color.Gray, 1), bc.StartPoint.GetPoint(), bc.MiddlePoint.GetPoint());
@@ -89,7 +94,7 @@ namespace lab3
                 }
             }
 
-            pictureBox1.Image = bmp;
+            //pictureBox1.Image = bmp;
 
 
         }
