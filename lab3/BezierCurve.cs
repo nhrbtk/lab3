@@ -38,6 +38,11 @@ namespace lab3
             BezierCurvePoints = CalculatePoints();
         }
 
+        public void Validate()
+        {
+            BezierCurvePoints = CalculatePoints();
+        }
+
         private List<MyPoint> CalculatePoints()
         {
             List<MyPoint> pointsToReturn = new List<MyPoint>();

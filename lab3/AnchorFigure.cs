@@ -23,6 +23,11 @@ namespace lab3
             AnchorToBuild = Build(bezierCurves);
         }
 
+        public void Validate()
+        {
+            AnchorToBuild = Build(bezierCurves);
+        }
+
         private List<MyPoint> Build(List<BezierCurve> curves)
         {
             List<MyPoint> ListToReturn = new List<MyPoint>();
